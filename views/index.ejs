@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="stateApp">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/base.css' />
+      <link rel="stylesheet" href="/bower_components/open-sans-fontface/open-sans.css"/>
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/underscore/underscore.js"></script>
+      <script src="/js/index.js"></script>
+  </head>
+  <body ng-controller="StateControl">
+    <div id="modal" ng-show="info" ng-click="clickonModal($event)" ng-keydown="escapeModal($event)">
+        <div class="modalInfo" ng-click="clickonModalData($event)">
+            {{info}}
+        </div>
+    </div>
+    <h1>State Controller</h1>
+    <div >
+        <div ng-repeat="state in message" class="state" ng-click="getStateInfo(state)">
+            <span>{{state.name}}</span>
+            <span>{{state.abbreviation}}</span>
+        </div>
+    </div>
+  </body>
+</html>

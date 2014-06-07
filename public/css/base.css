@@ -1,0 +1,45 @@
+html{
+    height: 100%;
+}
+body {
+    font: 300 1em 'Open Sans';
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.state{
+    display: inline-block;
+    background-color: #eee;
+    padding: 0.25em 0.75em;
+    margin: 0.25em;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+
+div.state:hover{
+    cursor: pointer;
+    background-color: #555;
+    color: #ddd;
+    text-shadow: 1px 1px 1px black;
+    transition: all 200ms ease;
+}
+
+div#modal {
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background-color: rgba(100, 100, 100, 0.8);
+    position: fixed;
+    width: 100%;
+}
+
+div.modalInfo{
+    position: relative;
+    word-break: break-all;
+    background-color: white;
+    width: 60%;
+    padding: 1em;
+    overflow: auto;
+}
